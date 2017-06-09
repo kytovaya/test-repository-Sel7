@@ -17,8 +17,6 @@ def test_example(driver):
     quantity = len(images)
     n=0
     for i in range(quantity):
-        if (len(images[i].find_elements_by_css_selector("div.sticker")) > 0):
-            if (len(images[i].find_elements_by_css_selector("div.sticker")) > 1):
         if (len(images[i].find_elements_by_css_selector("div.sticker")) != 1):
             print("images: ", images[i])
             n=1
