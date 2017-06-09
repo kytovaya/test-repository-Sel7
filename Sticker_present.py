@@ -19,10 +19,8 @@ def test_example(driver):
     for i in range(quantity):
         if (len(images[i].find_elements_by_css_selector("div.sticker")) > 0):
             if (len(images[i].find_elements_by_css_selector("div.sticker")) > 1):
-                print("images: ", i, images[i], "stickers: ", images[i].find_elements_by_css_selector("div.sticker"))
-                n=1
-        else:
-            print("No image sticker: ", i, images[i])
+        if (len(images[i].find_elements_by_css_selector("div.sticker")) != 1):
+            print("images: ", images[i])
             n=1
     if n==0:
         print("Only one sticker for each image on the page!")
